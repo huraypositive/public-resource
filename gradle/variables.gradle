@@ -3,6 +3,5 @@ ext {
     springBootVersion = '2.6.8'
     springCloudVersion = '2021.0.3'
     queryDslVersion = '5.0.0'
-//    springdocVersion = '1.3.9'
-//    springfoxVersion = '3.0.0'
+    springfoxVersion = '3.0.0'
 }
