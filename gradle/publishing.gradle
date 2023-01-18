@@ -1,0 +1,32 @@
+task sourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    archiveClassifier.set('javadoc')
+    from javadoc.destinationDir
+}
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            afterEvaluate {
+                artifactId = jar.baseName
+            }
+        }
+    }
+    repositories {
+        maven {
+            url ""
+            credentials {
+                username ""
+                password ""
+            }
+        }
+    }
+}
