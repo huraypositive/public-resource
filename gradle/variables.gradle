@@ -1,7 +1,26 @@
+def gitGetCurrentBranch() {
+    if(System.getenv("BRANCH_NAME") != null)
+        return System.getenv("BRANCH_NAME")
+    if(System.getenv("GIT_BRANCH") != null)
+        return System.getenv("GIT_BRANCH")
+    def branch = ""
+    def proc = "git rev-parse --abbrev-ref HEAD".execute()
+    proc.in.eachLine { line -> branch = line }
+    proc.err.eachLine { line -> println line }
+    proc.waitFor()
+    return branch
+}
+
 ext {
+    def branch = gitGetCurrentBranch()
+    
     kotlinVersion = '1.6.10'
     springBootVersion = '2.6.8'
     springCloudVersion = '2021.0.3'
     queryDslVersion = '5.0.0'
     springfoxVersion = '3.0.0'
+    
+    hurayModuleVersionArray = [
+        
+    ]
 }
