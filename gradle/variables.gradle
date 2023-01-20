@@ -20,7 +20,7 @@ ext {
     queryDslVersion = '5.0.0'
     springfoxVersion = '3.0.0'
     
-    hurayModuleVersionArray = [
-        
+    hurayModuleVersions = [
+        adminBootManagerEndpoint : '0.0.2'
     ]
 }
