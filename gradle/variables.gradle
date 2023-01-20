@@ -14,7 +14,7 @@ def gitGetCurrentBranch() {
 ext {
     def branch = gitGetCurrentBranch()
     
-    kotlinVersion = '1.6.10'
+//    kotlinVersion = '1.6.10'
     springBootVersion = '2.7.3'
     springCloudVersion = '2021.0.3'
     queryDslVersion = '5.0.0'
