@@ -15,8 +15,8 @@ ext {
     def branch = gitGetCurrentBranch()
     
     kotlinVersion = '1.6.10'
-    springBootVersion = '2.6.8'
-    springCloudVersion = '2021.0.3'
+    springBootVersion = '2.7.8'
+    springCloudVersion = '2021.0.5'
     queryDslVersion = '5.0.0'
     springfoxVersion = '3.0.0'
     
