@@ -21,6 +21,6 @@ ext {
     springfoxVersion = '3.0.0'
     
     hurayModuleVersions = [
-        adminBootManagerEndpoint : '0.0.2'
+        htdAdminBootManagerEndpoint : '0.0.2'
     ]
 }
