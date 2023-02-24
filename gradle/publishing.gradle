@@ -23,12 +23,8 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
             versionMapping {
-                usage('java-api') {
-                    fromResolutionOf('runtimeClasspath')
-                }
-                usage('java-runtime') {
-                    fromResolutionResult()
-                }
+                usage('java-api') { fromResolutionOf('runtimeClasspath') }
+                usage('java-runtime') { fromResolutionResult() }
             }
         }
 //        mavenJava(MavenPublication) {
@@ -38,7 +34,7 @@ publishing {
 //            afterEvaluate {
 //                artifactId = jar.baseName
 //            }
-        }
+//        }
     }
     repositories {
         maven {
