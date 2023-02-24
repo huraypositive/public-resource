@@ -18,8 +18,8 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 
 /* Auto with Gradle DSL*/
 java {
-    withJavadocJar()
     withSourcesJar()
+    withJavadocJar()
 }
 
 publishing {
