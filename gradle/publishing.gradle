@@ -2,6 +2,7 @@
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 
+/* Auto with Gradle DSL*/
 java {
     withJavadocJar()
     withSourcesJar()
