@@ -1,12 +1,7 @@
 /* publishing.gradle */
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
-
-/* Auto with Gradle DSL*/
-java {
-    withJavadocJar()
-    withSourcesJar()
-}
+apply plugin: 'signing'
 
 /* Menual */
 task sourcesJar(type: Jar) {
@@ -17,6 +12,12 @@ task sourcesJar(type: Jar) {
 task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier.set('javadoc')
     from javadoc.destinationDir
+}
+
+/* Auto with Gradle DSL*/
+java {
+    withJavadocJar()
+    withSourcesJar()
 }
 
 publishing {
