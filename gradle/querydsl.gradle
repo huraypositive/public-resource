@@ -2,6 +2,12 @@
 	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 
+dependencies {
+    /** query dsl **/
+	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
+}
+
 /* querydsl setting */
 def querydslDir = "$buildDir/generated/querydsl"
 
