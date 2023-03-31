@@ -9,13 +9,6 @@ buildscript {
     ext.buildScriptRootUrl = 'https://raw.githubusercontent.com/huraypositive/public-resource/main/gradle'
     apply from: "$buildScriptRootUrl/variables.gradle"
 
-    ext {
-        gsonVersion = "2.9.1"
-        javaJwtVersion = "3.19.2"
-        libphonenumberVersion = "8.12.57"
-        lifelogClientVersion = "0.9.1"
-    }
-
     repositories {
         maven {
             url "${mavenReleasesRepositoryUrl}"
