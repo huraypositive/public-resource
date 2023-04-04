@@ -25,6 +25,6 @@ ext {
     
     hurayModuleVersions = [
         htdAdminBootManagerEndpoint : '0.0.3',
-        pluginO3                    : '0.0.6'
+        pluginO3                    : '1.0.5'
     ]
 }
