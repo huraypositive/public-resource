@@ -11,13 +11,12 @@ buildscript {
 
     repositories {
         maven {
-            url "${mavenReleasesRepositoryUrl}"
+            url "${mavenHurayRepositoryUrl}"
             credentials {
                 username System.getenv("MAVEN_USERNAME")
                 password System.getenv("MAVEN_PASSWORD")
             }
         }
-        mavenCentral()
     }
 
     dependencies {
