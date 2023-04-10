@@ -4,6 +4,8 @@ plugins {
 }
 */
 
+apply plugin: "com.ewerk.gradle.plugins.querydsl"
+
 dependencies {
     /** query dsl **/
 	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
