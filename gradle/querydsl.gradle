@@ -3,6 +3,7 @@
 */
 
 /*
+// without `https://plugins.gradle.org/m2/` repo
 plugins {
 	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
