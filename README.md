@@ -1,7 +1,8 @@
 # public-resource
 
 1. `gradle.properties` 생성
-1. 최상위 gradle 파일에 아래와 같이 설정 
+  - references: https://github.com/huraypositive/core-platform-team/blob/main/gradle.properties
+3. 최상위 gradle 파일에 아래와 같이 설정 
 
 ``` gradle
 buildscript {
