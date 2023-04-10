@@ -1,0 +1,60 @@
+buildscript {
+    // https://github.com/huraypositive/public-resource/tree/main/gradle
+    ext.buildScriptRootUrl = 'https://raw.githubusercontent.com/huraypositive/public-resource/main/gradle'
+    apply from: "$buildScriptRootUrl/variables.gradle"
+
+    repositories {
+        maven {
+            url "${mavenHurayRepositoryUrl}"
+            credentials {
+                username System.getenv("MAVEN_USERNAME")
+                password System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'net.huray.htd'
+    version = '0.0.1'
+    sourceCompatibility = '17'
+
+    repositories {
+        maven {
+            url "${mavenHurayRepositoryUrl}"
+            credentials {
+                username System.getenv("MAVEN_USERNAME")
+                password System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    dependencies {
+    
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
+}
