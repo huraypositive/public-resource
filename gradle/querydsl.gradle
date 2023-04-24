@@ -9,7 +9,7 @@ plugins {
 }
 */
 
-//apply plugin: "com.ewerk.gradle.plugins.querydsl"
+apply plugin: "com.ewerk.gradle.plugins.querydsl"
 
 dependencies {
     /** query dsl **/
