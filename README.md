@@ -26,6 +26,7 @@ buildscript {
 
 allprojects {
     group 'net.huray'
+//    group 'io.huray'
     version '0.0.1'
 }
 ```
