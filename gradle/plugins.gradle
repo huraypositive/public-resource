@@ -3,12 +3,32 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-//group = 'net.huray.ehp.admin' // FIXME: to net.huray
-//version = '0.0.1-SNAPSHOT'
-//sourceCompatibility = '17'
+repositories {
+    maven {
+        url "${mavenHurayRepositoryUrl}"
+        credentials {
+            username System.getenv("MAVEN_USERNAME")
+            password System.getenv("MAVEN_PASSWORD")
+        }
+    }
+}
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+dependencies {
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+task printVersion {
+    doLast {
+        println project.version
     }
 }
