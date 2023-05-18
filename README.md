@@ -30,5 +30,48 @@ allprojects {
 }
 ```
 
+1. (선택) 하위 `subprojects` 공통 설정 
+
+``` gradle
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = '17'
+
+    repositories {
+        maven {
+            url "${mavenHurayRepositoryUrl}"
+            credentials {
+                username System.getenv("MAVEN_USERNAME")
+                password System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+
+    dependencies {
+    
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
+
+    task printVersion {
+        doLast {
+            println project.version
+        }
+    }
+}
+```
+
 <!-- external links --> 
 [gradle.properties]: https://github.com/huraypositive/core-platform-team/blob/main/gradle.properties
