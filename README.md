@@ -24,6 +24,11 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
     }
 }
+
+allprojects {
+    group 'net.huray'
+    version '0.0.1'
+}
 ```
 
 <!-- external links --> 
