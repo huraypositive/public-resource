@@ -58,6 +58,12 @@ subprojects {
         }
     }
 
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
     dependencies {
         /* Lombok */
         compileOnly 'org.projectlombok:lombok'
