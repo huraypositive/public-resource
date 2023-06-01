@@ -21,6 +21,12 @@ dependencyManagement {
     }
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 dependencies {
     /* Lombok */
     compileOnly 'org.projectlombok:lombok'
@@ -31,6 +37,11 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+javadoc.options.encoding = 'UTF-8'
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
 }
 
 task printVersion {
