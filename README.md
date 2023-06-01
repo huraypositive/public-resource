@@ -5,9 +5,7 @@
 
 ``` gradle
 buildscript {
-    // https://github.com/huraypositive/public-resource/tree/main/gradle
-    ext.buildScriptRootUrl = 'https://raw.githubusercontent.com/huraypositive/public-resource/main/gradle'
-    apply from: "$buildScriptRootUrl/variables.gradle"
+    apply from: 'https://raw.githubusercontent.com/huraypositive/public-resource/main/gradle/variables.gradle'
 
     repositories {
         maven {
