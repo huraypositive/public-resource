@@ -30,9 +30,5 @@ allprojects {
 }
 ```
 
-1. (선택) 하위 `subprojects` 공통 설정 
-
-- [subprojects-default.gradle](https://github.com/huraypositive/public-resource/blob/main/gradle/subprojects-default.gradle)
-
 <!-- external links --> 
 [gradle.properties]: https://github.com/huraypositive/core-platform-team/blob/main/gradle.properties
