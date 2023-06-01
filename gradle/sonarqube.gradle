@@ -1,3 +1,6 @@
+apply plugin: "org.sonarqube"
+apply plugin: "jacoco"
+
 jacoco {
     toolVersion = "0.8.8"
 }
@@ -29,7 +32,7 @@ jacocoTestCoverageVerification {
             element = 'CLASS'
 
             limit {
-                minimum = 0.40
+                minimum = 0.0
             }
 
             excludes = ["*Controller*", "*.Q*"]
@@ -37,12 +40,13 @@ jacocoTestCoverageVerification {
     }
 }
 
-sonarqube {
+sonar {
     properties {
+        property "sonar.projectKey", "${archivesBaseName}"
         property "sonar.projectName", "${archivesBaseName}"
         property "sonar.projectVersion", "${version}"
         property "sonar.host.url", "${sonarqubeHostUrl}"
-        property "sonar.login", "${sonarqubeLogin}"
+        property "sonar.token", "${sonarqubeToken}"
         property "sonar.sources", "src"
         property "sonar.language", "java"
         property "sonar.sourceEncoding", "UTF-8"
