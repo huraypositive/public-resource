@@ -15,7 +15,6 @@ dependencyManagement {
 dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'
     testImplementation 'org.testcontainers:mysql'
     testImplementation 'io.rest-assured:rest-assured'
