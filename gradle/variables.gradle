@@ -8,6 +8,7 @@ ext {
     
     queryDslVersion = '5.0.0'
     
+    sonarqubeVersion = '4.2.0.3129'
     testcontainersVersion = '1.18.1'
     
     hurayModuleVersions = [
