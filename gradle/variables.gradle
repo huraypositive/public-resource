@@ -8,6 +8,8 @@ ext {
     
     queryDslVersion = '5.0.0'
     
+    testcontainersVersion = '1.18.1'
+    
     hurayModuleVersions = [
         htdAdminBootManagerEndpoint : '0.0.3',
         pluginO3                    : '1.0.10',
