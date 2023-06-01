@@ -1,5 +1,5 @@
-apply plugin: "org.sonarqube"
-apply plugin: "jacoco"
+apply plugin: 'org.sonarqube'
+apply plugin: 'jacoco'
 
 jacoco {
     toolVersion = "0.8.8"
