@@ -1,6 +1,0 @@
-ext {
-    springBootVersion = '3.0.7'
-    springCloudVersion = '2022.0.2'
-    
-    sonarqubeVersion = '4.2.0.3129'
-}
