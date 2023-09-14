@@ -1,5 +1,5 @@
-/*
-* org.springframework.cloud:spring-cloud-dependencies 사전 설정 필요
+/**
+* note: org.springframework.cloud:spring-cloud-dependencies 사전 설정 필요
 */
 
 dependencies {
