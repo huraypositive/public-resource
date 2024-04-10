@@ -13,7 +13,7 @@ ext {
     ]
   } else {
     bom = [
-      protocolModuleVersion = '0.0.70d'
+      protocolModuleVersion = '0.0.72b'
       lifelogClientVersion = '2.9.4'
     ]
   }
