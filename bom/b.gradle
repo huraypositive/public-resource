@@ -5,13 +5,13 @@ ext {
   queryDslVersion = '5.0.0'
 
   bom = [
-    protocolModuleVersion = '0.0.72b',
+    protocolModuleVersion : '0.0.72b',
     
-    lifelogClientVersion = '2.9.4',
-    dustClientVersion = '1.1.0',
-    hornClientVersion = '3.5.0-sb3.0',
-    nebulaClientVersion = '1.2.8',
-    surveyClientVersion = '1.1.64',
-    surveyMessageConsumerVersion = '0.0.43',
+    lifelogClientVersion : '2.9.4',
+    dustClientVersion : '1.1.0',
+    hornClientVersion : '3.5.0-sb3.0',
+    nebulaClientVersion : '1.2.8',
+    surveyClientVersion : '1.1.64',
+    surveyMessageConsumerVersion : '0.0.43',
   ]
 }
