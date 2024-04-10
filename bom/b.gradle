@@ -1,20 +1,17 @@
 ext {
-  def branch = gitGetCurrentBranch()
-  
   springBootVersion = '3.1.7'
   springCloudVersion = '2022.0.4'
 
   queryDslVersion = '5.0.0'
 
-  if(branch.contains("main")) {
-    bom = [
-      protocolModuleVersion = '0.0.70d'
-      lifelogClientVersion = '2.9.4'
-    ]
-  } else {
-    bom = [
-      protocolModuleVersion = '0.0.72b'
-      lifelogClientVersion = '2.9.4'
-    ]
-  }
+  bom = [
+    protocolModuleVersion = '0.0.72b'
+    
+    lifelogClientVersion = '2.9.4'
+    dustClientVersion = '1.1.0'
+    hornClientVersion = '3.5.0-sb3.0'
+    nebulaClientVersion = '1.2.8'
+    surveyClientVersion = '1.1.64'
+    surveyMessageConsumerVersion = '0.0.43'
+  ]
 }
