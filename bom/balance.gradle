@@ -1,0 +1,28 @@
+bom = [
+        protocolModuleVersion        : '0.0.35',
+        protocolSurveyModuleVersion  : '1.2.29',
+        protocolCommonModuleVersion  : '1.2.20',
+        protocolContractModuleVersion: '1.2.25',
+
+        o3ClientVersion              : '0.0.8',
+        genesisClientVersion         : '0.0.4',
+
+        cargoClientVersion           : '1.1.7',
+        lifelogClientVersion         : '2.12.3',
+        dustClientVersion            : '1.1.0',
+        hornClientVersion            : '3.7.0-sb3.0',
+        nebulaClientVersion          : '1.3.0',
+
+        surveyClientVersion          : '1.1.64',
+        surveyMessageConsumerVersion : '0.0.47',
+
+        // domain
+        healthcareDomainVersion      : '0.0.15',
+
+        // module
+//                commonModuleVersion         : '0.0.10',
+        jpaModuleVersion             : '0.0.3',
+        healthconnectModuleVersion   : '0.0.9',
+        healthkitModuleVersion       : '0.0.10',
+        samsunghealthModuleVersion   : '0.0.9',
+]
